@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ej3tmdm2msy"]
+
+[ext_resource type="ArrayMesh" uid="uid://ba1i032mcypiq" path="res://Assets/Models/Scissors.obj" id="1_j73f7"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0801485, 0)
+
+[node name="Scissors" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -4.41374, 0, 0.736903)
+mesh = ExtResource("1_j73f7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.177085, 0.984196, 0, -0.984196, 0.177085, -0.739838, 149.428, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.0883, 50.0429, 134.713)
