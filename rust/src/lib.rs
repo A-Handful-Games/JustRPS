@@ -22,13 +22,6 @@ pub struct Throw {
 #[godot_api]
 impl INode3D for Throw {
     fn init(base: Base<Node3D>) -> Self {
-<<<<<<< HEAD
-=======
-        let s = format!("{:?}", fight(&Sign::Rock, &Sign::Scissors));
-        godot_print!("Rock attacking Scissors is a: {s}"); // Prints to the Godot console
-        godot_print!("Serving...");
-        let _ = networking::serve();
->>>>>>> 18f365ea5c4862e329cf309168e9d4722880eb6c
         Self {
             sign: Sign::Rock,
             base,
