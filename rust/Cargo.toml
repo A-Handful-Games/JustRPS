@@ -10,3 +10,6 @@ crate-type = ["cdylib"]  # Compile this crate to a dynamic C library.
 
 [dependencies]
 godot = { git = "https://github.com/godot-rust/gdext", branch = "master" }
+tokio = {version = "1.36.0", features = ["rt", "rt-multi-thread"]}
+axum = "*"
+fastwebsockets = {version = "*", features = ["upgrade", "with_axum"]}
