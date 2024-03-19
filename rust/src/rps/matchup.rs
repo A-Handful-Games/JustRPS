@@ -1,5 +1,8 @@
 use std::cmp::Ordering::{self, *};
+<<<<<<< HEAD
 use godot::builtin::meta::{ConvertError, GodotConvert, ToGodot, FromGodot};
+=======
+>>>>>>> 18f365ea5c4862e329cf309168e9d4722880eb6c
 
 #[derive(Debug, PartialEq)]
 pub enum Sign {
