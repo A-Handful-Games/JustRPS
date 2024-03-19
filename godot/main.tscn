@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://3ej3tmdm2msy"]
+[gd_scene load_steps=3 format=3 uid="uid://3ej3tmdm2msy"]
 
 [ext_resource type="ArrayMesh" uid="uid://ba1i032mcypiq" path="res://Assets/Models/Scissors.obj" id="1_j73f7"]
+[ext_resource type="Script" path="res://Scripts/Throw/test.gd" id="1_kjool"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Throw" type="Throw"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0801485, 0)
+script = ExtResource("1_kjool")
 
 [node name="Scissors" type="MeshInstance3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -4.41374, 0, 0.736903)

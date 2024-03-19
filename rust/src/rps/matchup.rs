@@ -1,6 +1,7 @@
 use std::cmp::Ordering::{self, *};
+use godot::builtin::meta::{ConvertError, GodotConvert, ToGodot, FromGodot};
 
-#[derive(PartialEq)]
+#[derive(Debug, PartialEq)]
 pub enum Sign {
     Rock,
     Paper,
@@ -22,6 +23,32 @@ impl PartialOrd for Sign {
                 (Self::Scissors, Self::Paper) => Some(Greater),
                 _ => None
             }
+        }
+    }
+}
+
+impl GodotConvert for Sign {
+    type Via = i8;
+}
+
+impl ToGodot for Sign {
+    fn to_godot(&self) -> Self::Via {
+        match self {
+            Self::Rock => 0,
+            Self::Paper => 1,
+            Self::Scissors => 2,
+            _ => -1
+        }
+    }
+}
+
+impl FromGodot for Sign {
+    fn try_from_godot(via: Self::Via) -> Result<Self, ConvertError> {
+        match via {
+            0 => Ok(Self::Rock),
+            1 => Ok(Self::Paper),
+            2 => Ok(Self::Scissors),
+            _ => Err(ConvertError::new("Failed to create sign from Godot"))
         }
     }
 }
