@@ -43,7 +43,8 @@ impl Throw {
     }
     #[func]
     fn start_server() {
-        godot_print!("Serving...");
-        let _ = networking::serve();
+        let port: usize = 3000;
+        godot_print!("Serving on {port}");
+        let _ = networking::serve(port);
     }
 }
